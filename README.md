@@ -1,14 +1,17 @@
 # 🚀 **Introduction**  
 This is a personal **Question-Answering (QA) project for PDF documents**, allowing users to **upload local PDF files** or **download PDF files via a link**. The system processes the document's content and provides answers based on user queries.  
 
-🔍 **Key Technologies**:  
-- **Frontend**: **Next.js** and **Tailwind CSS**.  
-- **Backend**: **FastAPI**.  
-- **AI Workflow**: **LangGraph** and **LangChain**.  
-- **Retrieval-Augmented Generation (RAG)**:  
-  - **ChromaDB** as the **vector store** for semantic search.  
-  - **MySQL** to store **file metadata, session data, and QA history**. 
+### Built With
 
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![FastAPI][FastAPI.js]][FastAPI-url]
+* [![TailwindCSS][TailwindCSS.js]][TailwindCSS-url]
+* [![LangChain][LangChain.js]][LangChain-url]
+* [![LangGraph][LangGraph.js]][LangGraph-url]
+* [![Motion.js][Motion.js]][Motion-url]
+* [![MySQL][MySQL.js]][MySQL-url]
+* [![ChromaDB][ChromaDB.js]][ChromaDB-url]
 # **Question Processing Workflow**
 <p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/backend/graph_pngs/question_handler_graph.png" height="600"></p>
 This workflow is designed to process user queries by combining multiple information retrieval and reasoning techniques. Below is a detailed breakdown of each step:
@@ -102,3 +105,23 @@ This workflow is designed to process user queries by combining multiple informat
 - **Skip decomposition** if sub-questions are dependent on the main query.
 - **Prioritize** diverse retrieval (MMR) and accuracy (reranking).
 - **Terminate workflow** immediately if reranking returns empty results (i.e., top 2 relevant documents have *score < 0*).
+
+  
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[FastAPI.js]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white
+[FastAPI-url]: https://fastapi.tiangolo.com/
+[TailwindCSS.js]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white
+[TailwindCSS-url]: https://tailwindcss.com/
+[LangChain.js]: https://img.shields.io/badge/LangChain-FF9900?style=for-the-badge&logo=python&logoColor=white
+[LangChain-url]: https://www.langchain.com/
+[LangGraph.js]: https://img.shields.io/badge/LangGraph-FF5733?style=for-the-badge&logo=graph&logoColor=white
+[LangGraph-url]: https://github.com/langchain-ai/langgraph
+[Motion.js]: https://img.shields.io/badge/Motion.js-FF3366?style=for-the-badge&logo=framer&logoColor=white
+[Motion-url]: https://motion.dev/
+[MySQL.js]: https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://www.mysql.com/
+[ChromaDB.js]: https://img.shields.io/badge/ChromaDB-FF6F00?style=for-the-badge&logo=database&logoColor=white
+[ChromaDB-url]: https://github.com/chroma-core/chroma
