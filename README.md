@@ -18,12 +18,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -151,7 +145,88 @@ This workflow is designed to process user queries by combining multiple informat
 ### **6. Final Compilation & Formatting**
 - Format the final response as **Markdown** (including headings, bullet points, and code blocks if needed) before delivering it to the frontend.
 
-  
+# Getting Started
+
+## Prerequisites
+
+Ensure you have the following installed on your system before proceeding:
+
+- **Python 3.8+** (for backend)
+- **Node.js 16+** (for frontend, recommended LTS version)
+- **npm** or **yarn** (for frontend package management)
+- **MySQL** (for database management)
+## Installation
+
+### Backend Setup
+
+#### 1. Create a Virtual Environment
+Navigate to the `backend` folder and create a virtual environment:
+
+```sh
+cd backend
+python -m venv venv
+```
+
+Activate the virtual environment:
+- **Windows:**
+  ```sh
+  venv\Scripts\activate
+  ```
+- **Mac/Linux:**
+  ```sh
+  source venv/bin/activate
+  ```
+
+#### 2. Install Dependencies
+Once the virtual environment is activated, install the required dependencies:
+
+```sh
+pip install --no-cache-dir -r requirements.txt
+```
+
+#### 3. Configure Environment Variables
+Create a `.env` file in the `backend` folder and copy the variables from `.example.env`. Fill in the required values:
+
+```
+DB_HOST=<your_mysql_host>
+DB_USER=<your_mysql_user>
+DB_PASSWORD=<your_mysql_password>
+DB_NAME=<your_database_name>
+API_KEY=<your_llm_provider_api_key>
+BASE_URL=<your_llm_provider_base_url>
+```
+
+Ensure that your LLM provider supports OpenAI-compatible APIs.
+
+#### 4. Start the Backend Server
+Run the following command to start the backend server using Uvicorn:
+
+```sh
+uvicorn main:app --host=0.0.0.0 --port=8000
+```
+
+### Frontend Setup
+
+#### 1. Install Dependencies
+Navigate to the `frontend` folder and install dependencies:
+
+```sh
+cd frontend
+npm install
+```
+
+#### 2. Start the Frontend Server
+Run the following command to start the Next.js development server:
+
+```sh
+npm run dev
+```
+
+The application will be available at `http://localhost:4000`.
+
+
+
+
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
