@@ -8,4 +8,3 @@ __pycache__/
 
 # Ignore Jupyter Notebook checkpoints and interactive Python notebooks
 *.ipynb
-*.sql
