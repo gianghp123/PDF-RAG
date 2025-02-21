@@ -192,8 +192,8 @@ DB_HOST=<your_mysql_host>
 DB_USER=<your_mysql_user>
 DB_PASSWORD=<your_mysql_password>
 DB_NAME=<your_database_name>
-API_KEY=<your_llm_provider_api_key>
-BASE_URL=<your_llm_provider_base_url>
+LLM_API_KEY=<your_llm_provider_api_key>
+LLM_BASE_URL=<your_llm_provider_base_url>
 ```
 
 Ensure that your LLM provider supports OpenAI-compatible APIs.
