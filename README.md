@@ -198,7 +198,29 @@ LLM_BASE_URL=<your_llm_provider_base_url>
 
 Ensure that your LLM provider supports OpenAI-compatible APIs.
 
-#### 4. Start the Backend Server
+#### 4. Customize Configuration Settings
+Feel free to customize config.py. 
+```
+import os
+
+llm_config = {
+    "model_name": "models/gemini-2.0-flash-lite-preview-02-05", # Your choice, free to replace based on your llm provider
+    "api_key": os.environ.get("LLM_API_KEY"),
+    "base_url": os.environ.get("LLM_BASE_URL"),
+}
+
+embedding_config = {
+    "model_name": "jinaai/jina-embeddings-v2-small-en",  # Any FastEmbed Embedding
+    "max_length": 1000,
+    "batch_size": 64,
+}
+
+reranker_config = {
+    "model_name": "jinaai/jina-reranker-v1-tiny-en" # Any FastEmbed TextCrossEncoder
+}  # FastEmbed TextCrossEncoder
+```
+
+#### 5. Start the Backend Server
 Run the following command to start the backend server using Uvicorn:
 
 ```sh
