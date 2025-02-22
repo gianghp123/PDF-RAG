@@ -56,7 +56,7 @@ This is a personal **Question-Answering (QA) project for PDF documents**, allowi
 - Restore previous sessions to continue discussions seamlessly  
 
 ## **Question Processing Workflow**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/backend/graph_pngs/question_handler_graph.png" height="600"></p>
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/root/backend/graph_pngs/question_handler_graph.png" height="600"></p>
 This workflow is designed to process user queries by combining multiple information retrieval and prompt engineering techniques. Below is a detailed breakdown of each step:
 
 ---
@@ -104,7 +104,7 @@ This workflow is designed to process user queries by combining multiple informat
 ---
 
 ### **4. Decomposing Question Handler**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/backend/graph_pngs/decomposing_question_handler_graph.png" height="400"></p>
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/root/backend/graph_pngs/decomposing_question_handler_graph.png" height="400"></p>
 
 - **Process sub-questions from step 3**.
 - For each sub-question, loop through **retrieve → grade → answer | rewrite** as follows:\
@@ -119,7 +119,7 @@ This workflow is designed to process user queries by combining multiple informat
 ---
 
 ### **5. Reasoning Question Handler**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/backend/graph_pngs/reasoning_question_handler_graph.png" height="500"></p>
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/main/root/backend/graph_pngs/reasoning_question_handler_graph.png" height="500"></p>
 
 #### **a. Thought Generation**
 - The LLM generates **thoughts** (ideas/concepts) focusing on specific aspects of the query.
