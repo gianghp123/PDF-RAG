@@ -199,7 +199,8 @@ LLM_BASE_URL=<your_llm_provider_base_url>
 Ensure that your LLM provider supports OpenAI-compatible APIs.
 
 #### 4. Customize Configuration Settings
-Feel free to customize config.py. 
+Feel free to customize config.py.\
+**NOTE: Please use the correct model name based on your API provider**
 ```
 import os
 
