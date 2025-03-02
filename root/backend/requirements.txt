@@ -19,3 +19,4 @@ requests
 typing-extensions
 python-multipart
 uvicorn[standard]
+rank_bm25
