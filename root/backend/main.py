@@ -25,10 +25,6 @@ from config import embedding_config, llm_config, reranker_config
 
 app_manager = AppManager()
 
-from fastapi import FastAPI
-import asyncio
-
-
 class RequestCancelledMiddleware:
     def __init__(self, app):
         self.app = app
