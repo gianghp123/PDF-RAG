@@ -37,8 +37,6 @@ This is a personal **Question-Answering (QA) project for PDF documents**, allowi
 <p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/question_handler_graph.png" height="600"></p>
 This workflow is designed to process user queries by combining multiple information retrieval and prompt engineering techniques. Below is a detailed breakdown of each step:
 
----
-
 #### **1. Preprocessing & Retrieval**
 
 ##### **a. Keyword Extraction**
@@ -51,8 +49,6 @@ This workflow is designed to process user queries by combining multiple informat
   - **Reranking**: Merges unique documents, selects **top 1** with score > 0.
 - **Stops if**: No documents score > 0, outputs *"The question seems to be not related to the current document or cannot be answered"*.
 
----
-
 #### **2. Evaluation & Refinement**
 
 - **Completeness Check**: 
@@ -60,7 +56,6 @@ This workflow is designed to process user queries by combining multiple informat
   - Insufficient → Rewrite query (once).
 - **Query Rewriting**: Simplifies query while keeping its focus.
 
----
 
 #### **3. Routing & Decomposition**
 
@@ -69,7 +64,6 @@ This workflow is designed to process user queries by combining multiple informat
   - Independent sub-questions → **Decomposing handler**.
   - Context-dependent → **Reasoning handler**.
 
----
 
 #### **4. Decomposing Question Handler**
 <p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/decomposing_question_handler_graph.png" height="400"></p>
@@ -80,7 +74,6 @@ This workflow is designed to process user queries by combining multiple informat
   3. Answer if sufficient, or rewrite (once) if not.
   4. Combine info to answer, then aggregate all sub-answers.
 
----
 
 #### **5. Reasoning Question Handler**
 <p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/reasoning_question_handler_graph.png" height="500"></p>
@@ -89,7 +82,6 @@ This workflow is designed to process user queries by combining multiple informat
 - **Observations**: Answers thoughts using retrieved documents, rewriting once if needed.
 - **Loop**: Continues until sufficient info is gathered, then compiles answer.
 
----
 
 #### **6. Final Formatting**
 - Formats response in **HTML** for the frontend.
