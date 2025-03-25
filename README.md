@@ -7,7 +7,6 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-        <li><a href="#project-features">Project Features</a></li>
         <li><a href="#question-processing-workflow">Question Processing Workflow</a></li>
       </ul>
     </li>
@@ -21,7 +20,7 @@
   </ol>
 </details>
 
-# About the project
+## About the project
 This is a personal **Question-Answering (QA) project for PDF documents**, allowing users to **upload local PDF files**. The system processes the document's content and provides answers based on user questions.  
 
 
@@ -34,18 +33,18 @@ This is a personal **Question-Answering (QA) project for PDF documents**, allowi
 * [![FastEmbed][FastEmbed-badge]][FastEmbed-url]
 * [![ChromaDB][ChromaDB.js]][ChromaDB-url]
 
-## **Question Processing Workflow**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/graph_pngs/question_handler_graph.png" height="600"></p>
+### **Question Processing Workflow**
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/question_handler_graph.png" height="600"></p>
 This workflow is designed to process user queries by combining multiple information retrieval and prompt engineering techniques. Below is a detailed breakdown of each step:
 
 ---
 
-### **1. Preprocessing & Retrieval**
+#### **1. Preprocessing & Retrieval**
 
-#### **a. Keyword Extraction**
+##### **a. Keyword Extraction**
 - Extracts keywords from the query using **KeyBERT** for BM25 retrieval.
 
-#### **b. Hybrid Retrieval**
+##### **b. Hybrid Retrieval**
 - Combines:
   - **BM25**: Uses top 2 keywords to fetch **5 documents**.
   - **ChromaDB with MMR**: Retrieves **10 documents** using Maximal Marginal Relevance.
@@ -54,7 +53,7 @@ This workflow is designed to process user queries by combining multiple informat
 
 ---
 
-### **2. Evaluation & Refinement**
+#### **2. Evaluation & Refinement**
 
 - **Completeness Check**: 
   - Sufficient info → Generate answer.
@@ -63,7 +62,7 @@ This workflow is designed to process user queries by combining multiple informat
 
 ---
 
-### **3. Routing & Decomposition**
+#### **3. Routing & Decomposition**
 
 - **Sub-Questions**: Breaks query into smaller parts.
 - **Routing**: 
@@ -72,8 +71,8 @@ This workflow is designed to process user queries by combining multiple informat
 
 ---
 
-### **4. Decomposing Question Handler**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/graph_pngs/decomposing_question_handler_graph.png" height="400"></p>
+#### **4. Decomposing Question Handler**
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/decomposing_question_handler_graph.png" height="400"></p>
 
 - Processes sub-questions via:
   1. Retrieve documents.
@@ -83,8 +82,8 @@ This workflow is designed to process user queries by combining multiple informat
 
 ---
 
-### **5. Reasoning Question Handler**
-<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/graph_pngs/reasoning_question_handler_graph.png" height="500"></p>
+#### **5. Reasoning Question Handler**
+<p align="center"><img alt="Question Handler Graph" src="https://github.com/gianghp123/PDF-RAG/blob/master/graph_pngs/reasoning_question_handler_graph.png" height="500"></p>
 
 - **Thoughts**: Generates one idea per step, avoiding redundancy.
 - **Observations**: Answers thoughts using retrieved documents, rewriting once if needed.
@@ -92,29 +91,26 @@ This workflow is designed to process user queries by combining multiple informat
 
 ---
 
-### **6. Final Formatting**
-- Formats response in **Markdown** for the frontend.
+#### **6. Final Formatting**
+- Formats response in **HTML** for the frontend.
 
 
-# Getting Started
+## Getting Started
 
-## Prerequisites
+### Prerequisites
 
 Ensure you have the following installed on your system before proceeding:
 
-- **Python 3.8+** (for backend)
-- **Node.js 16+** (for frontend, recommended LTS version)
-- **npm** or **yarn** (for frontend package management)
-- **MySQL** (for database management)
-## Installation
+- **Python 3.8+**
 
-### Backend Setup
+### Installation
+
+#### Setup
 
 #### 1. Create a Virtual Environment
-Navigate to the `backend` folder and create a virtual environment:
+Navigate to the project folder and create a virtual environment:
 
 ```sh
-cd backend
 python -m venv venv
 ```
 
@@ -136,44 +132,20 @@ pip install --no-cache-dir -r requirements.txt
 ```
 
 #### 3. Configure Environment Variables
-Create a `.env` file in the `backend` folder and copy the variables from `.example.env`. Fill in the required values:
+Create a `.env` file in the project folder and copy the variables from `.example.env`. Fill in the required values:
 
 ```
-DB_HOST=<your_mysql_host>
-DB_USER=<your_mysql_user>
-DB_PASSWORD=<your_mysql_password>
-DB_NAME=<your_database_name>
 LLM_API_KEY=<your_llm_provider_api_key>
 LLM_BASE_URL=<your_llm_provider_base_url>
 ```
 
 Ensure that your LLM provider supports OpenAI-compatible APIs.
 
-#### 4. Start the Backend Server
-Run the following command to start the backend server using Uvicorn:
-
-```sh
-uvicorn main:app --host=0.0.0.0 --port=8000
+### 4. Start gradio app
+Use the following command to start the gradio app:
 ```
-
-### Frontend Setup
-
-#### 1. Install Dependencies
-Navigate to the `frontend` folder and install dependencies:
-
-```sh
-cd frontend
-npm install
+python app.py
 ```
-
-#### 2. Start the Frontend Server
-Run the following command to start the Next.js development server:
-
-```sh
-npm run dev
-```
-
-The application will be available at `http://localhost:4000`.
 
 
 
