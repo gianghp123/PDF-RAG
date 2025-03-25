@@ -26,16 +26,12 @@ This is a personal **Question-Answering (QA) project for PDF documents**, allowi
 
 
 ### Built With
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Motion.js][Motion.js]][Motion-url]
-* [![TailwindCSS][TailwindCSS.js]][TailwindCSS-url]
-* [![FastAPI][FastAPI.js]][FastAPI-url]
+* [![Gradio][Gradio.js]][Gradio-url]
+* [![OpenRouter][OpenRouter.js]][OpenRouter-url]
 * [![LangChain][LangChain.js]][LangChain-url]
 * [![LangGraph][LangGraph.js]][LangGraph-url]
 * [![OpenAI][OpenAI-badge]][OpenAI-url]  
 * [![FastEmbed][FastEmbed-badge]][FastEmbed-url]
-* [![MySQL][MySQL.js]][MySQL-url]
 * [![ChromaDB][ChromaDB.js]][ChromaDB-url]
 
 ## Project Features
@@ -226,23 +222,14 @@ The application will be available at `http://localhost:4000`.
 
 
 
-
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[FastAPI.js]: https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white
-[FastAPI-url]: https://fastapi.tiangolo.com/
-[TailwindCSS.js]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white
-[TailwindCSS-url]: https://tailwindcss.com/
+[Gradio]: https://img.shields.io/badge/Gradio-FF9900?style=for-the-badge&logo=gradio&logoColor=white
+[Gradio-url]: https://gradio.app/
+[OpenRouter]: https://img.shields.io/badge/OpenRouter-FF9900?style=for-the-badge&logo=openrouter&logoColor=white
+[OpenRouter-url]: https://openrouter.ai/
 [LangChain.js]: https://img.shields.io/badge/LangChain-FF9900?style=for-the-badge&logo=python&logoColor=white
 [LangChain-url]: https://www.langchain.com/
 [LangGraph.js]: https://img.shields.io/badge/LangGraph-FF5733?style=for-the-badge&logo=graph&logoColor=white
 [LangGraph-url]: https://github.com/langchain-ai/langgraph
-[Motion.js]: https://img.shields.io/badge/Motion.js-FF3366?style=for-the-badge&logo=framer&logoColor=white
-[Motion-url]: https://motion.dev/
-[MySQL.js]: https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
-[MySQL-url]: https://www.mysql.com/
 [ChromaDB.js]: https://img.shields.io/badge/ChromaDB-FF6F00?style=for-the-badge&logo=database&logoColor=white
 [ChromaDB-url]: https://github.com/chroma-core/chroma
 [OpenAI-badge]: https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white  
