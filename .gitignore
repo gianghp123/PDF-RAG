@@ -1,0 +1,12 @@
+# Ignore specific folders
+uploads/
+chromadb/
+__pycache__/
+
+# Ignore environment files
+.env
+
+# Ignore Jupyter Notebook checkpoints and interactive Python notebooks
+*.ipynb
+
+*json

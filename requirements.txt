@@ -1,0 +1,16 @@
+numpy
+chromadb
+openai
+fastembed
+keybert
+langchain
+langchain-chroma
+langchain-community
+langchain-core
+langchain-openai
+langchain-text-splitters
+langgraph
+pydantic
+pymupdf
+python-dotenv
+typing-extensions
